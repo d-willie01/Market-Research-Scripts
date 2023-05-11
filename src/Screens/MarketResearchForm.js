@@ -92,7 +92,22 @@ function MarketResearchForm(props) {
             
             const response = await axios.post('https://sheet.best/api/sheets/c700e35c-7a01-40d7-be98-02b338c99541',data)
             console.log(response);
+            if (response.status === 200){
+                alert("Success!");
+                setContactFullName("");
+                setBusinessName("");
+                setBusinessAddress("")
+                setBusinessType("");
+                setEmail("");
+                setPhoneNum("");
+                setRevenue("");
+                setNumEmployees("");
+                setContactedBy("");
+                setInterest("");
+                setQuestion1("");
 
+
+            }
 
         } catch (error) {
             console.log(error)
