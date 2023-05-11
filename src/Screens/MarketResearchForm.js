@@ -62,7 +62,7 @@ function MarketResearchForm(props) {
           </div>
         );
       };
-    const submitForm = (e) => {
+    const submitForm = async(e) => {
         e.preventDefault();
         //console.log(firstName,lastName,age,school,teamName);
 
@@ -85,13 +85,19 @@ function MarketResearchForm(props) {
         console.log(data);
         
         //https://sheet.best/api/sheets/1c582245-0efb-4679-b58c-e5ffe07734dd
-        axios.post('https://sheet.best/api/sheets/c700e35c-7a01-40d7-be98-02b338c99541',data).then((response)=>{
+       
 
-        console.log(response);
-        
-        
 
-        })
+        try {
+            
+            const response = await axios.post('https://sheet.best/api/sheets/c700e35c-7a01-40d7-be98-02b338c99541',data)
+            console.log(response);
+
+
+        } catch (error) {
+            console.log(error)
+            alert("failed")
+        }
 
 
 }
