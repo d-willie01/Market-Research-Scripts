@@ -1,0 +1,44 @@
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown select element */
+  .dropdown-select {
+    appearance: none; /* Remove default appearance */
+    outline: none;
+    padding: 8px 32px 8px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Dropdown arrow icon */
+  .dropdown-select::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #000;
+    pointer-events: none;
+  }
+  
+  /* Dropdown option style */
+  .dropdown-select option {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  /* Hover effect on dropdown option */
+  .dropdown-select option:hover {
+    background-color: #ccc;
+  }
+  
